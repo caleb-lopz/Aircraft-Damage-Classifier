@@ -112,6 +112,8 @@ This project documents an iterative debugging process that moved from an underfi
 - Validation accuracy: 67.7%
 - Validation loss: 0.51
 - Issue: underfitting caused by insufficient training capacity / epochs
+- <img width="801" height="690" alt="Captura de pantalla 2026-07-01 172342" src="https://github.com/user-attachments/assets/db690912-658a-48cf-bcac-c3077b666a9d" />
+
 
 ### Iteration 2 — Extended training (20 epochs, no strong regularization)
 
@@ -119,6 +121,11 @@ This project documents an iterative debugging process that moved from an underfi
 - Validation accuracy: ~78%
 - Validation loss: dropped to 0.41 then rose to 0.53
 - Issue: overfitting; model memorized training samples rather than generalizing
+- <img width="801" height="677" alt="Captura de pantalla 2026-07-01 202453" src="https://github.com/user-attachments/assets/bbdf364b-6025-4001-85a4-1f9e63e197e5" />
+<img width="796" height="681" alt="Captura de pantalla 2026-07-01 202602" src="https://github.com/user-attachments/assets/cb36241f-b090-412d-9849-644d1d2af31a" />
+<img width="622" height="707" alt="Captura de pantalla 2026-07-01 202613" src="https://github.com/user-attachments/assets/c70e8cde-9bc4-466c-836f-4f4a36e90570" />
+
+
 
 ### Iteration 3 — Final model (Dropout + Early Stopping)
 
@@ -129,6 +136,9 @@ The final model adds dropout before dense layers and uses an `EarlyStopping` cal
 - `restore_best_weights=True`
 
 The final iteration is designed to stop training once validation loss ceases to improve and to recover the best-performing weights.
+<img width="802" height="691" alt="Captura de pantalla 2026-07-02 155748" src="https://github.com/user-attachments/assets/3dd0c6be-20d4-4917-9496-d99fafb6bd4e" />
+<img width="621" height="623" alt="Captura de pantalla 2026-07-02 155829" src="https://github.com/user-attachments/assets/f893544f-15bd-4f1a-8179-a25e764aec59" />
+<img width="788" height="591" alt="Captura de pantalla 2026-07-02 155812" src="https://github.com/user-attachments/assets/6ceb8021-fce2-4287-8378-84d50a768e6e" />
 
 ## Results
 
